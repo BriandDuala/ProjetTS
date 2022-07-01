@@ -20,6 +20,9 @@ steps:
     npm run build
     npm audit fix
     npm test
+
+- script: mocha test --reporter mocha-junit-reporter
+
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
