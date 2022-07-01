@@ -1,5 +1,5 @@
 ﻿// users hardcoded for simplicity, store in a db for production applications
-const users = [{ id: 1, username: 'test', password: 'Test1234', firstName: 'Test', lastName: 'User' }];
+const users = [{ id: 1, username: 'test', password: 'Test2@345', firstName: 'Test', lastName: 'User' }];
 
 module.exports = {
     authenticate,
