@@ -2,12 +2,12 @@
 const mocha = require('gulp-mocha');
 
 
-gulp.task('default', function () {
+gulp.task('./test-results.xml', function () {
     gulp.src('tests/**/*.js')
         .pipe(mocha({
           reporter: 'mocha-junit-reporter',
           reporterOptions: {
-            mochaFile: './TEST-RESULTS.xml'
-          }
+            mochaFile: './TEST-.xml'
+          } 
         }))    
 });
