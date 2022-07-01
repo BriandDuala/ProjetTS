@@ -1,6 +1,6 @@
-const gulp = require('gulp');
+
 const mocha = require('gulp-mocha');
-const istanbul = require('gulp-istanbul')
+
 
 gulp.task('default', function () {
     gulp.src('tests/**/*.js')
@@ -9,11 +9,5 @@ gulp.task('default', function () {
           reporterOptions: {
             mochaFile: './TEST-.xml'
           }
-        }))
-        .pipe(istanbul())
-        .pipe(istanbul.hookRequire())
-        .pipe(istanbul.writeReports({
-          dir: './coverage',
-          reporters: ['cobertura', 'html'] 
-        }));
+        }))    
 });
