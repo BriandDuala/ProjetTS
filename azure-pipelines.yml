@@ -33,7 +33,6 @@ steps:
     npm test
 
 
-
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
