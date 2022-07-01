@@ -21,7 +21,6 @@ steps:
     npm audit fix
     npm test
 
-- script: mocha test --reporter mocha-junit-reporter
 
 - task: PublishTestResults@2
   inputs:
@@ -48,5 +47,8 @@ steps:
     targetPath: '$(Build.ArtifactStagingDirectory)/npm'
     artifactName: npm
   displayName: 'Publish npm artifact'
+
+- script: mocha test --reporter mocha-junit-reporter
+
 
 
