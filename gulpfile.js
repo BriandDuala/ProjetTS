@@ -1,4 +1,4 @@
-const mocha = require('gulp-mocha');
+const mocha = require('junit-mocha');
 gulp.task('./test-results.xml', function () {
     gulp.src('tests/**/*.js')
         .pipe(mocha({
