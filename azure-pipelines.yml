@@ -15,11 +15,14 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+- script: mocha test --reporter mocha-junit-reporter
+
 - script: |
     npm install
     npm run build
     npm audit fix
     npm test
+
 
 
 - task: PublishTestResults@2
@@ -48,7 +51,6 @@ steps:
     artifactName: npm
   displayName: 'Publish npm artifact'
 
-- script: mocha test --reporter mocha-junit-reporter
 
 
 
