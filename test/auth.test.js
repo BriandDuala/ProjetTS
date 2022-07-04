@@ -33,7 +33,7 @@ describe("POST /users", () => {
     it("response json is 'good password' with status 200", async () => {
       const response = await request(app).post("/users").send({
         username: "username",
-        password: "Test2@345"
+        password: "Test2345"
       })
       assert.equal(response.body.message, "Everything is good")
     })
