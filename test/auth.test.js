@@ -27,13 +27,13 @@ describe("POST /users", () => {
         username: "username",
         password: "pass"
       })
-      assert.equal(response.statusCode, 201)
+      assert.equal(response.body.message, "Password too short expect to be >= 8 char")
     })
 
     it("response json is 'good password' with status 200", async () => {
       const response = await request(app).post("/users").send({
         username: "username",
-        password: "Test2345"
+        password: "Test@2345"
       })
       assert.equal(response.body.message, "Everything is good")
     })
