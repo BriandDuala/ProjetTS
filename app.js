@@ -29,7 +29,7 @@ app.post('/users', async (req, res) => {
     }
     else
     {
-        res.status(201).json({ message: 'Password too short expect to be >= 8 char' })
+        res.status(200).json({ message: 'Password too short expect to be >= 8 char' })
         return
     }
 })
