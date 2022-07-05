@@ -18,18 +18,18 @@ app.post('/users', async (req, res) => {
         var mediumRegex = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
 
         if(strongRegex.test(password)) {
-            res.json({ message: "Everything is good" })
+            res.end(JSON.stringify({"password": password, "username": username}));
         } else if(mediumRegex.test(password)) {
-            res.status(200).json({ message: "Medium password" })
+            res.status(400).json({ message: "Medium password" })
             return
         } else {
-            res.status(200).json({ message: "Poor password" })
+            res.status(400).json({ message: "Poor password" })
             return
         }
     }
     else
     {
-        res.status(200).json({ message: 'Password too short expect to be >= 8 char' })
+        res.status(400).json({ message: 'Password too short expect to be >= 8 char' })
         return
     }
 })
