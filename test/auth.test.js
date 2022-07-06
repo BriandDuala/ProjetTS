@@ -53,7 +53,7 @@ describe("POST /users", () => {
 
     it("Username or passwords is incorrect", async () => {
       const bodyData = [
-        {username: "username"},
+        {username: ""},
         {password: "password"},
         {}
       ]
