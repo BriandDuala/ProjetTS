@@ -21,6 +21,6 @@ steps:
 
 - script: |
     npm install
-    npm audit fix
     npm run build
+    npm audit fix
   displayName: 'npm install and build'
